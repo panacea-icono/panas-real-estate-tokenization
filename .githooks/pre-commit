@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+echo "🔎 Validando .env con Python…"
+python3 scripts/validate_env.py || exit 1
+echo "✅ .env OK"
+
+

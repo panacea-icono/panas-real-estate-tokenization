@@ -1,0 +1,45 @@
+name: Env Validate
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  validate-env:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Python .env validator
+        run: |
+          python3 scripts/validate_env.py
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ALGORAND_NETWORK: testnet
+          RELEASE_CHANNEL: production
+          PANAS_INDEX_WEIGHTS: '{"stablecoins":0.40,"medical":0.25,"infra_tech":0.15,"real_estate":0.10,"defi_liquidity":0.10}'
+          GOVERNANCE_UPDATE_INTERVAL_DAYS: "30"
+          DAO_MULTISIG_ADDRESS: ${{ secrets.DAO_MULTISIG_ADDRESS }}
+          ENABLE_TELEGRAM_BOT: "true"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          ENABLE_PANACEA_API: "true"
+          PANACEA_API_KEY: ${{ secrets.PANACEA_API_KEY }}
+          ENABLE_DEFI_YIELD: "true"
+          ALGORAND_MNEMONIC: ${{ secrets.ALGORAND_MNEMONIC }}
+          TON_RPC_URL: ${{ secrets.TON_RPC_URL }}
+          TON_WALLET_ADDRESS: ${{ secrets.TON_WALLET_ADDRESS }}
+          SOLANA_RPC_URL: ${{ secrets.SOLANA_RPC_URL }}
+          BSC_RPC_URL: ${{ secrets.BSC_RPC_URL }}
+          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+

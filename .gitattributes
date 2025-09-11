@@ -1,0 +1,33 @@
+# Normalize line endings for cross-OS collaboration
+* text=auto eol=lf
+
+# Treat common code/text as text
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+*.json text
+*.md text
+*.yml text
+*.yaml text
+*.css text
+*.scss text
+*.sh text eol=lf
+*.py text eol=lf
+*.sol text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.ico binary
+*.pdf binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# Keep CRLF for Windows-only files if ever added
+*.bat text eol=crlf
+*.cmd text eol=crlf

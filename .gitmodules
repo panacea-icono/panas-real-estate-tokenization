@@ -1,19 +1,4 @@
-[submodule "backend"]
-	path = backend
-	url = https://github.com/panacea-icono/panas-real-estate-tokenization-backend.git
-	branch = main
-
-[submodule "frontend"]
-	path = frontend
-	url = https://github.com/panacea-icono/panas-real-estate-tokenization-frontend.git
-	branch = main
-
-[submodule "ai"]
-	path = ai
-	url = https://github.com/panacea-icono/panas-real-estate-tokenization-ai.git
-	branch = main
-
-[submodule "analytics"]
-	path = analytics
-	url = https://github.com/panacea-icono/panas-real-estate-tokenization-analytics.git
-	branch = main
+# Submodules placeholder; add entries like:
+# [submodule "example-module"]
+# 	path = modules/example-module
+# 	url = https://github.com/your-org/example-module.git

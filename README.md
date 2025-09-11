@@ -23,6 +23,20 @@ Tokenización Inmobiliaria
 - **API Docs**: https://panas-real-estate-tokenization-backend.herokuapp.com/docs
 
 ## 🔧 Configuración
+
+### �� Variables de Entorno
+Las siguientes variables deben definirse en .env (ver .env.example):
+
+- PANAS_INDEX_WEIGHTS: Pesos del índice (JSON).
+- GOVERNANCE_UPDATE_INTERVAL_DAYS: Frecuencia de revisión del índice.
+- DATABASE_URL, POSTGRES_*: Configuración de base de datos.
+- REDIS_URL: Cache y colas.
+- OPENAI_API_KEY, HUGGINGFACE_API_KEY, OLLAMA_HOST: IA.
+- ALGORAND_NETWORK, ALGORAND_MNEMONIC: Contratos ASA (Algorand).
+- TON_API_KEY, TON_WALLET_MNEMONIC: Pagos TON/P2P.
+- SOLANA_RPC_URL, BSC_RPC_URL: Integraciones multichain.
+- HEROKU_API_KEY, HEROKU_APP_BACKEND: Deploy backend.
+- VERCEL_TOKEN, VERCEL_PROJECT_ID: Deploy frontend.
 ```bash
 # Instalar dependencias
 npm install

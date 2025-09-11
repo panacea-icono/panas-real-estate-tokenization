@@ -1,0 +1,31 @@
+name: PANAS FX Index Cron
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  compute-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps for oracle
+        run: |
+          npm install dotenv node-fetch@3
+      - name: Compute FX index
+        run: node scripts/oracles/panas_fx_index.mjs
+        env:
+          PANAS_FX_WEIGHT_OFFICIAL: ${{ vars.PANAS_FX_WEIGHT_OFFICIAL || '0.2' }}
+          PANAS_FX_WEIGHT_PARALLEL: ${{ vars.PANAS_FX_WEIGHT_PARALLEL || '0.4' }}
+          PANAS_FX_WEIGHT_CRYPTO: ${{ vars.PANAS_FX_WEIGHT_CRYPTO || '0.4' }}
+          FX_API_OFFICIAL: ${{ secrets.FX_API_OFFICIAL }}
+          FX_API_PARALLEL: ${{ secrets.FX_API_PARALLEL }}
+          FX_API_CRYPTO: ${{ secrets.FX_API_CRYPTO }}
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fx-index
+          path: data/fx-index.json

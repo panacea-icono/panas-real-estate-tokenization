@@ -1,0 +1,16 @@
+{
+  "name": "panas-backend",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.mjs",
+  "scripts": {
+    "dev": "node src/index.mjs",
+    "build": "echo 'no-build'",
+    "test": "echo 'no-tests'"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2"
+  }
+}

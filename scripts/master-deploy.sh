@@ -45,7 +45,12 @@ fi
 
 # 1. Install Dependencies
 show_progress "Installing dependencies..."
-npm ci
+if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
+    npm ci
+else
+    show_progress "No lockfile found, running npm install"
+    npm install
+fi
 show_success "Dependencies installed"
 
 # 2. Run Tests

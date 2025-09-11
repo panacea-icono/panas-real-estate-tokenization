@@ -1,0 +1,16 @@
+node_modules
+.git
+.gitmodules
+.github
+.githooks
+__pycache__
+*.pyc
+.env
+.env.*
+Dockerfile.local
+.docker
+.dockerignore
+coverage
+build
+dist
+.eslintcache

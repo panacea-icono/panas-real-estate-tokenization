@@ -1,0 +1,38 @@
+{
+  "dataset_standard": "PANAS-REA",
+  "asset_id": "REA-BO-LPZ-2025-0001",
+  "fx_index": 11.3,
+  "valuation": {
+    "V_inmueble": 90000,
+    "V_com": 100000,
+    "V_local_to_USDT": 100000,
+    "V_plus": 95000,
+    "weights": { "w1": 0.45, "w2": 0.25, "w3": 0.2, "w4": 0.1 },
+    "VBT": 94500
+  },
+  "ltv": {
+    "cap": 0.8,
+    "recommended": 0.75
+  },
+  "issuance": {
+    "amount_panas_unit": 70875,
+    "ticker": "PANAS-REA"
+  },
+  "oracles": {
+    "fx": "nfd:oraculos/fx_compuesto_bo",
+    "legal": "nfd:oraculos/registro_legal_bo",
+    "valuation": "nfd:valuadores/aval_bo_001"
+  },
+  "risk": {
+    "score": 27,
+    "class": "R1"
+  },
+  "evidence": {
+    "title_docs_cid": "ipfs://bafybeititulos...",
+    "inspection_pack_cid": "ipfs://bafybeiinspeccion..."
+  },
+  "links": {
+    "term_sheet": "ipfs://bafybeitermsheet...",
+    "panas_repo": "https://github.com/panacea-icono/panas-real-estate-tokenization"
+  }
+}

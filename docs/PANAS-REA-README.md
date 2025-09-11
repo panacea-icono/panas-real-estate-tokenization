@@ -89,3 +89,8 @@ Ver `.env.example` – sección PANAS-REA; claves principales:
 ---
 
 Este documento define el estándar operativo y técnico de PANAS-REA para emisiones consistentes, seguras y auditables dentro del ecosistema PANAS.
+
+### Referencias
+- Flujo de validación y emisión: `docs/PANAS-REA-flow.md`
+- Ejemplo de metadatos: `docs/panas-rea-metadata.example.json`
+- Esquema JSON (validación): `docs/panas-rea-metadata.schema.json`

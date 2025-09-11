@@ -1,0 +1,72 @@
+{
+  "$schema": "./panas-rea-metadata.schema.json",
+  "standard": "PANAS-REA",
+  "version": "1.0",
+  "asset_id": "REA-2025-0001",
+  "title_hash": "bafkreigh2akiscaildc6u...",
+  "geo": {
+    "country": "VE",
+    "city": "Caracas",
+    "coords": {
+      "lat": 10.4806,
+      "lng": -66.9036
+    }
+  },
+  "risk_class": "R1",
+  "oracles": {
+    "valuation": "algo:ORC_VAL_001",
+    "legal": "algo:ORC_LEG_002",
+    "fx": "algo:ORC_FX_003",
+    "occupancy": "algo:ORC_OCC_004"
+  },
+  "appraisal": {
+    "v_inmueble": 90000,
+    "v_comparables": 92000,
+    "v_local_usdt": 95000,
+    "v_plus": 97000,
+    "weights": {
+      "w1": 0.45,
+      "w2": 0.25,
+      "w3": 0.20,
+      "w4": 0.10
+    }
+  },
+  "vbt": 94500,
+  "ltv_caps": {
+    "regional_cap": 0.75,
+    "hard_cap": 0.80
+  },
+  "return_model": {
+    "type": "revshare",
+    "params": {
+      "revshare_pct": 0.30,
+      "periodicity": "monthly"
+    }
+  },
+  "covenants": {
+    "reporting_freq_days": 30,
+    "pool": {
+      "enabled": true,
+      "lock_months": 6,
+      "min_tvl": 10000,
+      "slashing_rules": "withdraw_before_lock:5%"
+    }
+  },
+  "evidence": [
+    {
+      "type": "photo",
+      "hash": "bafkrei...",
+      "gps": [10.4806, -66.9036],
+      "timestamp": "2025-09-11T10:00:00Z"
+    }
+  ],
+  "governance": {
+    "region": "VE-Capital",
+    "originator_cap_year": 1000000,
+    "kyc_level": "standard"
+  },
+  "links": {
+    "docs": "ipfs://bafybeidocs...",
+    "termsheet": "ipfs://bafybeiterms..."
+  }
+}

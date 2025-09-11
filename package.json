@@ -42,7 +42,7 @@
     "jsonwebtoken": "^9.0.2",
     "bcryptjs": "^2.4.3",
     "openai": "^4.20.1",
-    "huggingface": "^0.0.8"
+    "@huggingface/inference": "^2.8.1"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",

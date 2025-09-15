@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PANAS Real Estate Tokenization - Custom Styles */
+@layer base {
+  :root {
+    --panas-primary: #6005FF;
+    --panas-secondary: #3B82F6;
+    --panas-success: #16A34A;
+    --panas-warning: #EAB308;
+    --panas-error: #DC2626;
+    --panas-background: #FFFFFF;
+    --panas-surface: #F9FAFB;
+    --panas-text-primary: #111827;
+    --panas-text-secondary: #4B5563;
+  }
+
+  .dark {
+    --panas-background: #111827;
+    --panas-surface: #1F2937;
+    --panas-text-primary: #FFFFFF;
+    --panas-text-secondary: #D1D5DB;
+  }
+}
+
+@layer components {
+  .panas-button {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .panas-button-primary {
+    @apply panas-button bg-brand-primary-600 text-white hover:bg-brand-hover-700;
+  }
+
+  .panas-button-secondary {
+    @apply panas-button bg-button-secondary text-white hover:bg-button-secondary-hover;
+  }
+
+  .panas-card {
+    @apply bg-background-primary border border-border-subtle rounded-lg shadow-soft-shadow p-6;
+  }
+
+  .panas-input {
+    @apply w-full px-3 py-2 border border-field-border rounded-md bg-field-secondary-background text-field-input placeholder-field-placeholder focus:border-brand-primary-600 focus:ring-1 focus:ring-brand-primary-600;
+  }
+
+  .panas-label {
+    @apply block text-sm font-medium text-field-label mb-1;
+  }
+
+  .panas-error {
+    @apply text-field-color-error text-sm mt-1;
+  }
+
+  .panas-success {
+    @apply text-support-success text-sm mt-1;
+  }
+}
+
+@layer utilities {
+  .panas-gradient {
+    background: linear-gradient(135deg, #6005FF 0%, #3B82F6 100%);
+  }
+
+  .panas-text-gradient {
+    @apply bg-gradient-to-r from-brand-primary-600 to-brand-400 bg-clip-text text-transparent;
+  }
+
+  .panas-shadow-brand {
+    box-shadow: 0 4px 14px 0 rgba(96, 5, 255, 0.25);
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "ultimate-addons-for-gutenberg-panas",
+  "version": "2.9.0",
+  "description": "Ultimate Addons for Gutenberg - PANAS Real Estate Tokenization Integration",
+  "main": "ultimate-addons-for-gutenberg.php",
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "tailwindcss -i ./admin-core/assets/src/dashboard-app/src/index.css -o ./admin-core/assets/build/dashboard-app.css --watch",
+    "dev": "npm run build:css -- --watch",
+    "prod": "npm run build:css -- --minify",
+    "lint": "eslint . --ext .js,.jsx",
+    "lint:fix": "eslint . --ext .js,.jsx --fix"
+  },
+  "keywords": [
+    "wordpress",
+    "gutenberg",
+    "blocks",
+    "panas",
+    "real-estate",
+    "tokenization",
+    "blockchain"
+  ],
+  "author": "PANAS Ecosystem",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "eslint": "^8.55.0",
+    "eslint-config-wordpress": "^2.0.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panacea-icono/panas-real-estate-tokenization.git"
+  },
+  "bugs": {
+    "url": "https://github.com/panacea-icono/panas-real-estate-tokenization/issues"
+  },
+  "homepage": "https://panas.app"
+}

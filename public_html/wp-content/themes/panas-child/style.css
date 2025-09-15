@@ -1,0 +1,32 @@
+/*
+Theme Name: PANAS Child
+Theme URI: https://panacea-icono.sa/
+Description: Child theme para animaciones y personalizaciones de PANAS (no editar core WP).
+Author: Panacea | PANAS
+Version: 0.1.0
+Template: twentytwentyfour
+Text Domain: panas-child
+*/
+
+:root {
+  --panas-primary: #0f172a;
+  --panas-accent: #06b6d4;
+}
+
+.panas-fade-in { opacity: 0; animation: panasFadeIn .9s ease forwards; }
+@keyframes panasFadeIn { to { opacity: 1; } }
+
+.panas-slide-up { transform: translateY(18px); opacity: 0; animation: panasSlideUp .9s ease forwards; }
+@keyframes panasSlideUp { to { transform: translateY(0); opacity: 1; } }
+
+.panas-hero {
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(6,182,212,.12), transparent),
+              linear-gradient(180deg, rgba(15,23,42,.9), rgba(15,23,42,.98));
+  color: #e2e8f0;
+  padding: 96px 24px;
+  text-align: center;
+}
+
+.panas-cta { background: var(--panas-accent); color: #0b1020; padding: 12px 20px; border-radius: 8px; display: inline-block; }
+
+.wp-block-columns.panas-compact > .wp-block-column { margin-bottom: 0; }

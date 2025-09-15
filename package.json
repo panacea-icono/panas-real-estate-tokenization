@@ -21,9 +21,19 @@
     "docker:down": "docker-compose down",
     "heroku:deploy": "git subtree push --prefix=backend heroku main",
     "vercel:deploy": "cd frontend && vercel --prod",
-    "release": "npm run build && npm run test && npm run deploy"
+    "release": "npm run build && npm run test && npm run deploy",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
-  "keywords": ["panas", "ecosystem", "blockchain", "web3", "defi"],
+  "keywords": [
+    "panas",
+    "ecosystem",
+    "blockchain",
+    "web3",
+    "defi"
+  ],
   "author": "PANAS Ecosystem",
   "license": "MIT",
   "repository": {
@@ -42,7 +52,17 @@
     "jsonwebtoken": "^9.0.2",
     "bcryptjs": "^2.4.3",
     "openai": "^4.20.1",
-    "@huggingface/inference": "^2.8.1"
+    "@huggingface/inference": "^2.8.1",
+    "huggingface": "^0.0.8",
+    "algosdk": "^2.7.0",
+    "@solana/web3.js": "^1.95.0",
+    "ethers": "^6.13.1",
+    "@ton/ton": "^15.0.0",
+    "telegraf": "^4.15.6",
+    "discord.js": "^14.14.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^14.0.4"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
@@ -50,6 +70,11 @@
     "eslint": "^8.55.0",
     "prettier": "^3.1.0",
     "husky": "^8.0.3",
-    "lint-staged": "^15.2.0"
+    "lint-staged": "^15.2.0",
+    "typescript": "^5.6.2",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18"
   }
 }

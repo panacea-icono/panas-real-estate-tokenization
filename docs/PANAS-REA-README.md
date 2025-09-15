@@ -92,5 +92,33 @@ Este documento define el estándar operativo y técnico de PANAS-REA para emisio
 
 ### Referencias
 - Flujo de validación y emisión: `docs/PANAS-REA-flow.md`
-- Ejemplo de metadatos: `docs/panas-rea-metadata.example.json`
-- Esquema JSON (validación): `docs/panas-rea-metadata.schema.json`
+- Ejemplo de metadatos: `docs/examples/panas-rea-metadata.example.json`
+- Esquema JSON (validación): `docs/schemas/panas-rea-metadata.schema.json`
+
+## Metadatos & Validación
+
+- JSON de ejemplo (IPFS-ready): `docs/examples/panas-rea-metadata.example.json`
+- JSON Schema: `docs/schemas/panas-rea-metadata.schema.json`
+
+Validación rápida:
+
+```bash
+# Node (ajv)
+npm i -D ajv ajv-formats
+npx ajv validate -s docs/schemas/panas-rea-metadata.schema.json -d docs/examples/panas-rea-metadata.example.json --strict=false
+
+# Python
+pip install jsonschema
+python - <<'PY'
+import json
+from jsonschema import validate
+schema=json.load(open('docs/schemas/panas-rea-metadata.schema.json'))
+data=json.load(open('docs/examples/panas-rea-metadata.example.json'))
+validate(instance=data, schema=schema)
+print('✅ Metadata válida')
+PY
+```
+
+Endpoints sugeridos (off‑chain):
+- `GET /rea/:id/metadata` → devuelve el JSON de metadatos (o referencia IPFS)
+- `POST /oracles/update` → oráculos firmados actualizan valuación/registro/FX

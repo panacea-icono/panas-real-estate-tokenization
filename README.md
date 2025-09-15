@@ -1,9 +1,11 @@
 # 🚀 panas-real-estate-tokenization
 
 ## 📋 Descripción
+
 Tokenización Inmobiliaria
 
 ## 🎯 Funcionalidades Principales
+
 - Integración multi-blockchain
 - APIs de IA integradas
 - Dashboard completo
@@ -11,6 +13,7 @@ Tokenización Inmobiliaria
 - Analytics avanzado
 
 ## 🚀 Tecnologías
+
 - **Blockchain**: Algorand,Solana,TON
 - **Backend**: React,Node.js
 - **Base de Datos**: PostgreSQL,IPFS
@@ -18,13 +21,15 @@ Tokenización Inmobiliaria
 - **Deploy**: Heroku,Vercel
 
 ## 🌐 URLs
+
 - **Live**: https
-- **Backend**: https://panas-real-estate-tokenization-backend.herokuapp.com
-- **API Docs**: https://panas-real-estate-tokenization-backend.herokuapp.com/docs
+- **Backend**: [https://panas-real-estate-tokenization-backend.herokuapp.com](https://panas-real-estate-tokenization-backend.herokuapp.com)
+- **API Docs**: [https://panas-real-estate-tokenization-backend.herokuapp.com/docs](https://panas-real-estate-tokenization-backend.herokuapp.com/docs)
 
 ## 🔧 Configuración
 
-### �� Variables de Entorno
+### 🔐 Variables de Entorno
+
 Las siguientes variables deben definirse en .env (ver .env.example):
 
 - PANAS_INDEX_WEIGHTS: Pesos del índice (JSON).
@@ -37,6 +42,7 @@ Las siguientes variables deben definirse en .env (ver .env.example):
 - SOLANA_RPC_URL, BSC_RPC_URL: Integraciones multichain.
 - HEROKU_API_KEY, HEROKU_APP_BACKEND: Deploy backend.
 - VERCEL_TOKEN, VERCEL_PROJECT_ID: Deploy frontend.
+
 ```bash
 # Instalar dependencias
 npm install
@@ -52,6 +58,7 @@ npm run dev
 ```
 
 ## 📊 Módulos Integrados
+
 - Backend API
 - Frontend React/Next.js
 - Servicios de IA
@@ -60,6 +67,7 @@ npm run dev
 - Payment processing
 
 ## 🎯 Próximos Pasos
+
 1. Configurar credenciales
 2. Ejecutar tests
 3. Deploy a producción
